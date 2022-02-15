@@ -1,0 +1,638 @@
+<html>
+    <head>
+        <title>Диспетчерская</title>
+        <!-- UIkit CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/css/uikit.min.css" />
+    </head>
+    <body>
+
+        
+        <div class="uk-section">
+            <div class="uk-container">
+
+                
+                <div class="uk-child-width-1-2@s" uk-grid>
+                    <div>
+                        <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
+                            <h3 class="uk-card-title">Журнал сведения</h3>
+                            <a onclick="exportToExcel()" class="uk-button uk-button-text">Экспортировать данные в формате эксель</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
+                            <h3 class="uk-card-title">Мобильное приложение</h3>
+                            <a onclick="exportToExcel()" class="uk-button uk-button-text">Скачать APK файл для ОС Android</a>
+                        </div>
+                    </div>
+                </div>
+                
+        </div>
+        </div>
+        
+        <div class="uk-section">
+            <div class="uk-container">
+            <article class="uk-article">
+
+                <h1 class="uk-article-title"><a class="uk-link-reset" href="">Таблица происшествий</a></h1>
+            
+                <p class="uk-article-meta">Работает в режиме реального времени</a></p>
+              
+            
+                <table class="uk-table uk-table-middle uk-table-divider">
+                    <thead>
+                        <tr>
+                            <th class="uk-width-small">Здание</th>
+                            <th>Описание</th>
+                            <th>Отряд ПСО</th>
+                            <th>Отменить</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                    
+                    </tbody>
+                </table>
+                
+            </article>
+        </div>
+        </div>
+
+
+
+
+        <div class="uk-section">
+        <div class="uk-container">
+            
+            <h1 class="uk-article-title"><a class="uk-link-reset" href="">Список домов</a></h1>
+            
+            <p class="uk-article-meta">находящихся под бдительной защитой</a></p>
+            <div class="uk-child-width-1-3@m" uk-grid>
+              
+                <div>
+                    <div class="uk-card uk-card-hover  uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="./img/poster.png" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Здание #1</h3>
+                            <p>Здание для богатых людей, привыкших сочетать роскошь с минимализмом. Доступна вертолетная площадка</p>
+                        </div>
+                        <div class="uk-card-footer">
+                            <div class="uk-margin">
+                                <label class="uk-form-label" for="floor1">Выберите этаж</label>
+                                <div class="uk-form-controls">
+                                    <select class="uk-select" id="floor1">
+                                        <option value="1">Этаж 1</option>
+                                        <option value="2">Этаж 2</option>
+                                        <option value="3">Этаж 3</option>
+                                        <option value="4">Этаж 4</option>
+                                        <option value="5">Этаж 5</option>
+                                        <option value="6">Этаж 6</option>
+                                        <option value="7">Этаж 7</option>
+                                        <option value="8">Этаж 8</option>
+                                        <option value="9">Этаж 9</option>
+                                        <option value="10">Этаж 10</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="uk-margin">
+                                <label class="uk-form-label" for="entrance1">Выберите подъезд</label>
+                                <div class="uk-form-controls">
+                                    <select class="uk-select" id="entrance1">
+                                        <option value="1">Подъезд 1</option>
+                                        <option value="2">Подъезд 2</option>
+                                        <option value="3">Подъезд 3</option>
+                                        <option value="4">Подъезд 4</option>
+                                        <option value="5">Подъезд 5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <a onclick="clickedFire(this.id)" id="1" class="uk-button uk-button-text">Включить тревогу</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="uk-card uk-card-hover  uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="./img/poster.png" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Здание #2</h3>
+                            <p>Здание для богатых людей, привыкших сочетать роскошь с минимализмом. Доступна вертолетная площадка</p>
+                        </div>
+                        <div class="uk-card-footer">
+                            <div class="uk-margin">
+                                <label class="uk-form-label" for="floor2">Выберите этаж</label>
+                                <div class="uk-form-controls">
+                                    <select class="uk-select" id="floor2">
+                                        <option value="1">Этаж 1</option>
+                                        <option value="2">Этаж 2</option>
+                                        <option value="3">Этаж 3</option>
+                                        <option value="4">Этаж 4</option>
+                                        <option value="5">Этаж 5</option>
+                                        <option value="6">Этаж 6</option>
+                                        <option value="7">Этаж 7</option>
+                                        <option value="8">Этаж 8</option>
+                                        <option value="9">Этаж 9</option>
+                                        <option value="10">Этаж 10</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="uk-margin">
+                                <label class="uk-form-label" for="entrance2">Выберите подъезд</label>
+                                <div class="uk-form-controls">
+                                    <select class="uk-select" id="entrance2">
+                                        <option value="1">Подъезд 1</option>
+                                        <option value="2">Подъезд 2</option>
+                                        <option value="3">Подъезд 3</option>
+                                        <option value="4">Подъезд 4</option>
+                                        <option value="5">Подъезд 5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <a onclick="clickedFire(this.id)" id="2" class="uk-button uk-button-text">Включить тревогу</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="uk-card uk-card-hover  uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="./img/poster.png" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Здание #3</h3>
+                            <p>Здание для богатых людей, привыкших сочетать роскошь с минимализмом. Доступна вертолетная площадка</p>
+                        </div>
+                        <div class="uk-card-footer">
+                            <div class="uk-margin">
+                                <label class="uk-form-label" for="floor3">Выберите этаж</label>
+                                <div class="uk-form-controls">
+                                    <select class="uk-select" id="floor3">
+                                        <option value="1">Этаж 1</option>
+                                        <option value="2">Этаж 2</option>
+                                        <option value="3">Этаж 3</option>
+                                        <option value="4">Этаж 4</option>
+                                        <option value="5">Этаж 5</option>
+                                        <option value="6">Этаж 6</option>
+                                        <option value="7">Этаж 7</option>
+                                        <option value="8">Этаж 8</option>
+                                        <option value="9">Этаж 9</option>
+                                        <option value="10">Этаж 10</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="uk-margin">
+                                <label class="uk-form-label" for="entrance3">Выберите подъезд</label>
+                                <div class="uk-form-controls">
+                                    <select class="uk-select" id="entrance3">
+                                        <option value="1">Подъезд 1</option>
+                                        <option value="2">Подъезд 2</option>
+                                        <option value="3">Подъезд 3</option>
+                                        <option value="4">Подъезд 4</option>
+                                        <option value="5">Подъезд 5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <a onclick="clickedFire(this.id)" id="3" class="uk-button uk-button-text">Включить тревогу</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="uk-card uk-card-hover  uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="./img/poster.png" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Здание #4</h3>
+                            <p>Здание для богатых людей, привыкших сочетать роскошь с минимализмом. Доступна вертолетная площадка</p>
+                        </div>
+                        <div class="uk-card-footer">
+                            <div class="uk-margin">
+                                <label class="uk-form-label" for="floor4">Выберите этаж</label>
+                                <div class="uk-form-controls">
+                                    <select class="uk-select" id="floor4">
+                                        <option value="1">Этаж 1</option>
+                                        <option value="2">Этаж 2</option>
+                                        <option value="3">Этаж 3</option>
+                                        <option value="4">Этаж 4</option>
+                                        <option value="5">Этаж 5</option>
+                                        <option value="6">Этаж 6</option>
+                                        <option value="7">Этаж 7</option>
+                                        <option value="8">Этаж 8</option>
+                                        <option value="9">Этаж 9</option>
+                                        <option value="10">Этаж 10</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="uk-margin">
+                                <label class="uk-form-label" for="entrance4">Выберите подъезд</label>
+                                <div class="uk-form-controls">
+                                    <select class="uk-select" id="entrance4">
+                                        <option value="1">Подъезд 1</option>
+                                        <option value="2">Подъезд 2</option>
+                                        <option value="3">Подъезд 3</option>
+                                        <option value="4">Подъезд 4</option>
+                                        <option value="5">Подъезд 5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <a onclick="clickedFire(this.id)" id="4" class="uk-button uk-button-text">Включить тревогу</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="uk-card uk-card-hover  uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="./img/poster.png" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Здание #5</h3>
+                            <p>Здание для богатых людей, привыкших сочетать роскошь с минимализмом. Доступна вертолетная площадка</p>
+                        </div>
+                        <div class="uk-card-footer">
+                            <div class="uk-margin">
+                                <label class="uk-form-label" for="floor5">Выберите этаж</label>
+                                <div class="uk-form-controls">
+                                    <select class="uk-select" id="floor5">
+                                        <option value="1">Этаж 1</option>
+                                        <option value="2">Этаж 2</option>
+                                        <option value="3">Этаж 3</option>
+                                        <option value="4">Этаж 4</option>
+                                        <option value="5">Этаж 5</option>
+                                        <option value="6">Этаж 6</option>
+                                        <option value="7">Этаж 7</option>
+                                        <option value="8">Этаж 8</option>
+                                        <option value="9">Этаж 9</option>
+                                        <option value="10">Этаж 10</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="uk-margin">
+                                <label class="uk-form-label" for="entrance5">Выберите подъезд</label>
+                                <div class="uk-form-controls">
+                                    <select class="uk-select" id="entrance5">
+                                        <option value="1">Подъезд 1</option>
+                                        <option value="2">Подъезд 2</option>
+                                        <option value="3">Подъезд 3</option>
+                                        <option value="4">Подъезд 4</option>
+                                        <option value="5">Подъезд 5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <a onclick="clickedFire(this.id)" id="5" class="uk-button uk-button-text">Включить тревогу</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="uk-card uk-card-hover  uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="./img/poster.png" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Здание #6</h3>
+                            <p>Здание для богатых людей, привыкших сочетать роскошь с минимализмом. Доступна вертолетная площадка</p>
+                        </div>
+                        <div class="uk-card-footer">
+                            <div class="uk-margin">
+                                <label class="uk-form-label" for="floor6">Выберите этаж</label>
+                                <div class="uk-form-controls">
+                                    <select class="uk-select" id="floor6">
+                                        <option value="1">Этаж 1</option>
+                                        <option value="2">Этаж 2</option>
+                                        <option value="3">Этаж 3</option>
+                                        <option value="4">Этаж 4</option>
+                                        <option value="5">Этаж 5</option>
+                                        <option value="6">Этаж 6</option>
+                                        <option value="7">Этаж 7</option>
+                                        <option value="8">Этаж 8</option>
+                                        <option value="9">Этаж 9</option>
+                                        <option value="10">Этаж 10</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="uk-margin">
+                                <label class="uk-form-label" for="entrance6">Выберите подъезд</label>
+                                <div class="uk-form-controls">
+                                    <select class="uk-select" id="entrance6">
+                                        <option value="1">Подъезд 1</option>
+                                        <option value="2">Подъезд 2</option>
+                                        <option value="3">Подъезд 3</option>
+                                        <option value="4">Подъезд 4</option>
+                                        <option value="5">Подъезд 5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <a onclick="clickedFire(this.id)" id="6" class="uk-button uk-button-text">Включить тревогу</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="uk-card uk-card-hover  uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="./img/poster.png" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Здание #7</h3>
+                            <p>Здание для богатых людей, привыкших сочетать роскошь с минимализмом. Доступна вертолетная площадка</p>
+                        </div>
+                        <div class="uk-card-footer">
+                            <div class="uk-margin">
+                                <label class="uk-form-label" for="floor7">Выберите этаж</label>
+                                <div class="uk-form-controls">
+                                    <select class="uk-select" id="floor7">
+                                        <option value="1">Этаж 1</option>
+                                        <option value="2">Этаж 2</option>
+                                        <option value="3">Этаж 3</option>
+                                        <option value="4">Этаж 4</option>
+                                        <option value="5">Этаж 5</option>
+                                        <option value="6">Этаж 6</option>
+                                        <option value="7">Этаж 7</option>
+                                        <option value="8">Этаж 8</option>
+                                        <option value="9">Этаж 9</option>
+                                        <option value="10">Этаж 10</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="uk-margin">
+                                <label class="uk-form-label" for="entrance7">Выберите подъезд</label>
+                                <div class="uk-form-controls">
+                                    <select class="uk-select" id="entrance7">
+                                        <option value="1">Подъезд 1</option>
+                                        <option value="2">Подъезд 2</option>
+                                        <option value="3">Подъезд 3</option>
+                                        <option value="4">Подъезд 4</option>
+                                        <option value="5">Подъезд 5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <a onclick="clickedFire(this.id)" id="7" class="uk-button uk-button-text">Включить тревогу</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="uk-card uk-card-hover  uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="./img/poster.png" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Здание #8</h3>
+                            <p>Здание для богатых людей, привыкших сочетать роскошь с минимализмом. Доступна вертолетная площадка</p>
+                        </div>
+                        <div class="uk-card-footer">
+                            <div class="uk-margin">
+                                <label class="uk-form-label" for="floor8">Выберите этаж</label>
+                                <div class="uk-form-controls">
+                                    <select class="uk-select" id="floor8">
+                                        <option value="1">Этаж 1</option>
+                                        <option value="2">Этаж 2</option>
+                                        <option value="3">Этаж 3</option>
+                                        <option value="4">Этаж 4</option>
+                                        <option value="5">Этаж 5</option>
+                                        <option value="6">Этаж 6</option>
+                                        <option value="7">Этаж 7</option>
+                                        <option value="8">Этаж 8</option>
+                                        <option value="9">Этаж 9</option>
+                                        <option value="10">Этаж 10</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="uk-margin">
+                                <label class="uk-form-label" for="entrance8">Выберите подъезд</label>
+                                <div class="uk-form-controls">
+                                    <select class="uk-select" id="entrance8">
+                                        <option value="1">Подъезд 1</option>
+                                        <option value="2">Подъезд 2</option>
+                                        <option value="3">Подъезд 3</option>
+                                        <option value="4">Подъезд 4</option>
+                                        <option value="5">Подъезд 5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <a onclick="clickedFire(this.id)" id="8" class="uk-button uk-button-text">Включить тревогу</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="uk-card uk-card-hover  uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="./img/poster.png" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Здание #9</h3>
+                            <p>Здание для богатых людей, привыкших сочетать роскошь с минимализмом. Доступна вертолетная площадка</p>
+                        </div>
+                        <div class="uk-card-footer">
+                            <div class="uk-margin">
+                                <label class="uk-form-label" for="floor9">Выберите этаж</label>
+                                <div class="uk-form-controls">
+                                    <select class="uk-select" id="floor9">
+                                        <option value="1">Этаж 1</option>
+                                        <option value="2">Этаж 2</option>
+                                        <option value="3">Этаж 3</option>
+                                        <option value="4">Этаж 4</option>
+                                        <option value="5">Этаж 5</option>
+                                        <option value="6">Этаж 6</option>
+                                        <option value="7">Этаж 7</option>
+                                        <option value="8">Этаж 8</option>
+                                        <option value="9">Этаж 9</option>
+                                        <option value="10">Этаж 10</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="uk-margin">
+                                <label class="uk-form-label" for="entrance9">Выберите подъезд</label>
+                                <div class="uk-form-controls">
+                                    <select class="uk-select" id="entrance9">
+                                        <option value="1">Подъезд 1</option>
+                                        <option value="2">Подъезд 2</option>
+                                        <option value="3">Подъезд 3</option>
+                                        <option value="4">Подъезд 4</option>
+                                        <option value="5">Подъезд 5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <a onclick="clickedFire(this.id)" id="9" class="uk-button uk-button-text">Включить тревогу</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="uk-card uk-card-hover  uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="./img/poster.png" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Здание #10</h3>
+                            <p>Здание для богатых людей, привыкших сочетать роскошь с минимализмом. Доступна вертолетная площадка</p>
+                        </div>
+                        <div class="uk-card-footer">
+                            <div class="uk-margin">
+                                <label class="uk-form-label" for="floor10">Выберите этаж</label>
+                                <div class="uk-form-controls">
+                                    <select class="uk-select" id="floor10">
+                                        <option value="1">Этаж 1</option>
+                                        <option value="2">Этаж 2</option>
+                                        <option value="3">Этаж 3</option>
+                                        <option value="4">Этаж 4</option>
+                                        <option value="5">Этаж 5</option>
+                                        <option value="6">Этаж 6</option>
+                                        <option value="7">Этаж 7</option>
+                                        <option value="8">Этаж 8</option>
+                                        <option value="9">Этаж 9</option>
+                                        <option value="10">Этаж 10</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="uk-margin">
+                                <label class="uk-form-label" for="entrance10">Выберите подъезд</label>
+                                <div class="uk-form-controls">
+                                    <select class="uk-select" id="entrance10">
+                                        <option value="1">Подъезд 1</option>
+                                        <option value="2">Подъезд 2</option>
+                                        <option value="3">Подъезд 3</option>
+                                        <option value="4">Подъезд 4</option>
+                                        <option value="5">Подъезд 5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <a onclick="clickedFire(this.id)" id="10" class="uk-button uk-button-text">Включить тревогу</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+        <script src="./socket.io.js"></script>
+        <script src="./xlsx.full.min.js"></script>
+        <script src="./FileSaver.min.js"></script>
+        <script>
+            var socket = io();
+            var wb = XLSX.utils.book_new();
+
+            wb.Props = {
+                Title: "SheetJS Tutorial",
+                Subject: "Test",
+                Author: "Red Stapler",
+                CreatedDate: new Date(2017,12,19)
+            };
+
+            wb.SheetNames.push("Test Sheet");
+
+            var ws_data = [['hello' , 'world'], ['hello' , 'world']];
+
+            var ws = XLSX.utils.aoa_to_sheet(ws_data);
+
+            wb.Sheets["Test Sheet"] = ws;
+
+            var wbout = XLSX.write(wb, {bookType:'xlsx',  type: 'binary'});
+
+            function s2ab(s) { 
+                var buf = new ArrayBuffer(s.length); //convert s to arrayBuffer
+                var view = new Uint8Array(buf);  //create uint8array as viewer
+                for (var i=0; i<s.length; i++) view[i] = s.charCodeAt(i) & 0xFF; //convert to octet
+                return buf;    
+            }
+            
+            socket.on('exportExcel', function(data) {
+                
+                for (var i =0; i< data.length; i++){
+                    ws_data = JSON.parse(data[i]);
+                }
+                
+                console.log(ws_data);
+                
+                saveAs(new Blob([s2ab(wbout)],{type:"application/octet-stream"}), 'test.xlsx');  
+            });
+
+            function exportToExcel(){
+                socket.emit('exportExcel');
+            }
+
+            function clickedFire(clicked_id){
+                var floor = document.getElementById("floor"+clicked_id).value;
+                var entrance = document.getElementById("entrance"+clicked_id).value;
+                var data = {
+                    "building":clicked_id,
+                    "floor":floor,
+                    "entrance":entrance,
+                    "FIO":"Диспетчер",
+                    "status":"Тревога!"
+                };
+                socket.emit('alert', data);
+            }
+
+        
+            socket.on('alert', function(data) {
+                addToTable(data);                
+            });
+
+            socket.on('initial notes', function(data) {
+                
+                for (var i =0; i< data.length; i++){
+                    var obj = JSON.parse(data[i]);
+                    addToTable(obj);
+                }
+                
+            });
+
+
+
+            function addToTable(data){
+                console.log(data);
+                
+                var element = document.getElementById("tableBody");
+                
+                var div = document.createElement('tr');
+
+                div.id= 'tr'+data.id;
+                div.innerHTML = '<td>Здание №'+data.building+'</td><td>'+data.FIO+' включил тревогу в '+data.entrance+' подъезде на '+data.floor+' этаже</td><td><button class="uk-button uk-button-default" id="'+ data.id+'" onClick="deleteFromTable(this.id, '+data.building+', '+data.floor+', '+data.entrance+', 1)" type="button">Отправить</button></td><td><button class="uk-button uk-button-default" type="button" onClick="deleteFromTable(this.id, '+data.building+', '+data.floor+', '+data.entrance+', 2)" id="'+ data.id+'">Отменить</button></td>';
+                
+                element.append(div);
+                    
+                console.log(div);
+                
+                
+            }
+
+            function deleteFromTable(id, data_building, floor, entrance, emit){
+                var data = {
+                    "id":id,
+                    "building":data_building,
+                    "floor":floor,
+                    "entrance":entrance,
+                    "FIO":"Диспетчер",
+                    "status":"Отмена тревоги"
+                }
+                if (emit == 1) socket.emit("sendSBR", data);
+                if (emit == 2) socket.emit("cancelAlert", data);
+                
+                var row = document.getElementById("tr"+id);
+                row.parentNode.removeChild(row);
+            }
+
+        </script>
+
+        <!-- UIkit JS -->
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.10.1/dist/js/uikit-icons.min.js"></script>
+    
+    </body>
+    
+</html>
